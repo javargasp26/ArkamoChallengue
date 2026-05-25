@@ -1,4 +1,4 @@
-package com.example.arkamochallengue.ui.theme
+package com.example.arkamochallengue.core.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
