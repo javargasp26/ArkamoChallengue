@@ -18,6 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.arkamochallengue.core.ui.theme.ArkamoChallengueTheme
 import com.example.arkamochallengue.domain.model.CharacterModel
+import com.example.arkamochallengue.domain.model.CharacterStatus
 
 @Composable
 fun CharacterListContent(
@@ -138,7 +139,7 @@ fun CharacterListSuccessPreview() {
                     CharacterModel(
                         id = 1,
                         name = "Rick Sanchez",
-                        status = "Alive",
+                        status = CharacterStatus.ALIVE,
                         image = ""
                     )
                 )

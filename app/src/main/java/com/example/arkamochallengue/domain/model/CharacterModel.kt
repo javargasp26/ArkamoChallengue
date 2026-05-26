@@ -4,5 +4,5 @@ data class CharacterModel(
     val id: Int,
     val image: String,
     val name: String,
-    val status: String,
+    val status: CharacterStatus,
 )

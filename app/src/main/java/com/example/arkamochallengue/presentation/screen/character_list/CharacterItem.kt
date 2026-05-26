@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -27,10 +26,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.SubcomposeAsyncImage
 import coil.request.ImageRequest
+import com.example.arkamochallengue.R
 import com.example.arkamochallengue.domain.model.CharacterModel
+import com.example.arkamochallengue.domain.model.CharacterStatus
+import com.example.arkamochallengue.domain.model.displayName
 
 @Composable
 fun CharacterItem(
@@ -98,7 +101,8 @@ fun CharacterItem(
                     ) {
 
                         Text(
-                            text = "Image error"
+                            text = "Failed to load",
+                            style = MaterialTheme.typography.bodySmall
                         )
 
                         Spacer(
@@ -131,8 +135,7 @@ fun CharacterItem(
                 Spacer(modifier = Modifier.height(8.dp))
 
                 Text(
-                    text = "Status: ${character.status}",
-                    style = MaterialTheme.typography.bodyMedium
+                    text = character.status.displayName()
                 )
             }
         }

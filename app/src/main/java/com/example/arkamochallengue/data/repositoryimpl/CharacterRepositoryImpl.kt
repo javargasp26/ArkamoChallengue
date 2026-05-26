@@ -1,7 +1,7 @@
 package com.example.arkamochallengue.data.repositoryimpl
 
 import com.example.arkamochallengue.core.remote.Api
-import com.example.arkamochallengue.data.remote.mapper.toCharacter
+import com.example.arkamochallengue.data.remote.mapper.toCharacterModel
 import com.example.arkamochallengue.domain.model.CharacterModel
 import com.example.arkamochallengue.domain.repository.CharacterRepository
 
@@ -16,7 +16,7 @@ class CharacterRepositoryImpl(
             .getCharacters()
             .results
             .map { dto ->
-                dto.toCharacter()
+                dto.toCharacterModel()
             }
     }
 }
